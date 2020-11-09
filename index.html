@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- font awesome link -->
+    <script src="https://use.fontawesome.com/b338eedd70.js"></script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<style>
+      body {
+    background-color: #eee
+}
+
+.img-selected {
+  opacity: 0.5;
+}
+
+    </style>
+
+    <title>CVPR QUIZ</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="d-flex justify-content-center row">
+          <div class="col-md-10 col-lg-10">
+              <div class="border">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                  <a class="navbar-brand" href="#">Blind Test</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Bayer <span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="quad-bayer.html">Quad-Bayer</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+
+
+                  <div class="question bg-white p-3 border-bottom">
+                    
+                    <div class="d-flex flex-row justify-content-between align-items-center mcq">
+                          <h4>Bayer</h4><span>(CVPR)</span>
+                      </div>
+                  </div>
+                  <div class="question bg-white p-3 border-bottom">
+
+                    <form method="POST" id='id-form'>
+                      <h5> 1. Select the Better Photo </h5>
+                      <div class="row">
+                        <div class="col-sm">
+                          <input type="radio" id="ra-1a" name="1" value="1a" onchange="add_class('1a')">
+                          <label for="1a"><img src="images/Bayer/1a.png" class="img-fluid" id='1a' alt="Responsive image"></label></input>
+                        </div>
+                        <div class="col-sm">
+                          <input type="radio" id="ra-1" name="1" value="1" onchange="add_class('1')">
+                          <label for="1"><img src="images/Bayer/1.png" class="img-fluid" id='1' alt="Responsive image"></label>
+                        </div>
+                      </div>
+
+                      <h5> 2. Select the Better Photo </h5>
+                      <div class="row">
+                        <div class="col-sm">
+                          <input type="radio" id="ra-2" name="2" value="2" onchange="add_class('2')">
+                          <label for="2"><img src="images/Bayer/2.png" class="img-fluid" id='2' alt="Responsive image"></label>
+                        </div>
+                        <div class="col-sm">
+                          <input type="radio" id="ra-2a" name="2" value="2a" onchange="add_class('2a')">
+                          <label for="2a"><img src="images/Bayer/2a.png" class="img-fluid" id='2a' alt="Responsive image"></label>
+                        </div>
+                      </div>
+
+                      <h5> 3. Select the Better Photo </h5>
+                      <div class="row">
+                        <div class="col-sm">
+                          <input type="radio" id="ra-3" name="3" value="3" onchange="add_class('3')">
+                          <label for="3"><img src="images/Bayer/3.png" class="img-fluid" id='3' alt="Responsive image"></label>
+                        </div>
+                        <div class="col-sm">
+                          <input type="radio" id="ra-3a" name="3" value="3a" onchange="add_class('3a')">
+                          <label for="3a"><img src="images/Bayer/3a.png" class="img-fluid" id='3a' alt="Responsive image"></label>
+                        </div>
+                      </div>
+
+                      <h5> 4. Select the Better Photo </h5>
+                      <div class="row">
+                        <div class="col-sm">
+                          <input type="radio" id="ra-4a" name="4" value="4a" onchange="add_class('4a')">
+                          <label for="4a"><img src="images/Bayer/4a.png" class="img-fluid" id='4a' alt="Responsive image"></label>
+                        </div>
+                        <div class="col-sm">
+                          <input type="radio" id="ra-4" name="4" value="4" onchange="add_class('4')">
+                          <label for="4"><img src="images/Bayer/4.png" class="img-fluid" id='4' alt="Responsive image"></label>
+                        </div>
+                      </div>
+
+                      <h5> 5. Select the Better Photo </h5>
+                      <div class="row">
+                        <div class="col-sm">
+                          <input type="radio" id="ra-5a" name="5" value="5a" onchange="add_class('5a')">
+                          <label for="5a"><img src="images/Bayer/5a.png" class="img-fluid" id='5a' alt="Responsive image"></label>
+                        </div>
+                        <div class="col-sm">
+                          <input type="radio" id="ra-5" name="5" value="5" onchange="add_class('5')">
+                          <label for="5"><img src="images/Bayer/5.png" class="img-fluid" id='5' alt="Responsive image"></label>
+                        </div>
+                      </div>
+
+                      <button name="data" class="btn btn-primary" type="submit" id="btnData">Submit</button>
+                    </form>  
+                  </div>
+                 
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+    
+
+    document.querySelector("#id-form").addEventListener("submit", function(event) {
+         event.preventDefault();
+
+         const formData = new FormData(document.querySelector('form'))
+        raw = 0
+        reconstructed = 0
+        for (var pair of formData.entries()) {
+          if (pair[1].length == 1){
+            raw+=1;
+          }  
+          else {
+            reconstructed += 1;
+          }
+          
+          // console.log("raw : "+ raw " ..... "+ "reconstructed: "+reconstructed);
+          // window.alert(raw +" . . . "+reconstructed);
+        }
+        
+        window.alert("Bayer result: \n" + "raw: "+ raw +"\nreconstructed: "+reconstructed); 
+
+    }, false);  
+
+
+
+   
+    function add_class(name) {
+
+      if(name.length == 2){
+        console.log(name)
+        var img_name = name.charAt(0);  
+        console.log(img_name)
+        var element = document.getElementById(img_name);
+        console.log(element.classList.contains('img-selected'))
+        if(element.classList.contains('img-selected')){
+          element.classList.remove('img-selected')
+        }
+      }
+      else{
+        console.log(name)
+        var img_name = name + 'a';  
+        console.log(img_name)
+        var element2 = document.getElementById(img_name);
+        console.log(element2.classList.contains('img-selected'))
+        if(element2.classList.contains("img-selected")){
+          console.log("asche.....")
+          element2.classList.remove("img-selected")
+        }
+      }
+      var element1 = document.getElementById(name);
+      element1.classList.add("img-selected");
+    }
+
+    
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
